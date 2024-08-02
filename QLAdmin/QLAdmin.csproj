@@ -105,6 +105,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\CSS\style.css" />
+    <Content Include="Areas\img\tải xuống %281%29.jpg" />
+    <Content Include="Areas\JS\script.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -123,9 +126,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CSS\style.css" />
     <Content Include="Global.asax" />
-    <Content Include="JS\script.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -153,6 +154,7 @@
     <Compile Include="Areas\Admin\Data\SanphamDisplayVM.cs" />
     <Compile Include="Areas\Admin\Data\SanphamVM.cs" />
     <Compile Include="Areas\Admin\Data\ThongkeVM.cs" />
+    <Compile Include="Areas\Admin\Helpers\Phanquyen.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -211,6 +213,8 @@
     <Content Include="Areas\Admin\Views\QLDonhang\UpdateStatus.cshtml" />
     <Content Include="Areas\Admin\Views\QLAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\QLThongke\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -230,7 +234,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\QLSanphamDefault\" />
-    <Folder Include="Areas\img\" />
     <Folder Include="Controllers\" />
     <Folder Include="Views\QLDashboard\" />
   </ItemGroup>
