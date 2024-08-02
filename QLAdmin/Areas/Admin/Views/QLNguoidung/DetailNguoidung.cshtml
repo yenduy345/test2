@@ -65,7 +65,7 @@
                         <dd class="col-sm-8">@Model.Username</dd>
 
                         <dt class="col-sm-4">Mật Khẩu:</dt>
-                        <dd class="col-sm-8">******</dd> <!-- Ẩn mật khẩu cho bảo mật -->
+                        <dd class="col-sm-8">@Model.Password</dd> 
 
                         <dt class="col-sm-4">Vai Trò:</dt>
                         <dd class="col-sm-8">@Model.VaiTro</dd>
@@ -75,7 +75,7 @@
         </div>
         <div class="card-footer text-end">
             @Html.ActionLink("Sửa", "EditNguoidung", new { id = Model.CustomerID }, new { @class = "btn btn-warning btn-xs text-white" }) 
-            @Html.ActionLink("Trở Về Danh Sách", "Index", new { }, new { @class = "btn btn-warning btn-xs text-white" })
+            @Html.ActionLink("Trở Về Danh Sách", "QLNguoidung", new { }, new { @class = "btn btn-warning btn-xs text-white" })
         </div>
 
     </div>

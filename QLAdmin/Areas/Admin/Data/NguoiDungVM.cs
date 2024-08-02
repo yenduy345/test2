@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+using System.Web.Mvc;
 
 namespace QLAdmin.Areas.Admin.Data
 {
@@ -15,7 +13,7 @@ namespace QLAdmin.Areas.Admin.Data
         [Display(Name = "Họ Tên")]
         public string FullName { get; set; }
 
-        [Display (Name = "Ngày sinh")]
+        [Display(Name = "Ngày sinh")]
         public DateTime? NgaySinh { get; set; }
 
         [Display(Name = "Số điện thoại")]
@@ -30,7 +28,7 @@ namespace QLAdmin.Areas.Admin.Data
         [Display(Name = "Hình ảnh")]
         public string ProfileImage { get; set; }
 
-        [Display(Name = " Tên đăng nhập")]
+        [Display(Name = "Tên đăng nhập")]
         public string Username { get; set; }
 
         [Display(Name = "Mật khẩu")]
@@ -38,5 +36,7 @@ namespace QLAdmin.Areas.Admin.Data
 
         [Display(Name = "Vai trò")]
         public string VaiTro { get; set; }
+
+        public IEnumerable<SelectListItem> VaiTroList { get; set; }
     }
 }

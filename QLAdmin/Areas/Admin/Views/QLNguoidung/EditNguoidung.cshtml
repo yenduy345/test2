@@ -89,7 +89,7 @@
             <div class="form-group row mb-3">
                 @Html.LabelFor(model => model.VaiTro, htmlAttributes: new { @class = "col-md-2 col-form-label" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.VaiTro, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.DropDownListFor(model => model.VaiTro, Model.VaiTroList, "Chọn Vai Trò", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.VaiTro, "", new { @class = "text-danger" })
                 </div>
             </div>

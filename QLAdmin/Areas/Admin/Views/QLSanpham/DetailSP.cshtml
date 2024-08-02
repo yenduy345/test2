@@ -30,7 +30,7 @@
                 <dd class="col-sm-9">
                     @if (!string.IsNullOrEmpty(Model.HinhAnh))
                     {
-                        <img src="@Model.HinhAnh" alt="Image" class="img-fluid" />
+                        <img src="~/Areas/img/@Model.HinhAnh" alt="Image" class="img-thumbnail" style="max-width: 100px; height: auto;">
                     }
                     else
                     {

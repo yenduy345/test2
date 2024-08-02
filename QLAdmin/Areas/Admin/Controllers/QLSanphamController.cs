@@ -99,28 +99,27 @@ namespace QLAdmin.Areas.Admin.Controllers
             item.Gia = formData.Gia;
             item.MoTa = formData.MoTa;
             item.SoLuong = formData.SoLuong;
-            //item.AnhBia = "";
             item.SizeID = formData.SizeID;
             item.PhanLoaiID = formData.PhanLoaiID;
-            //if (fileUpload != null && fileUpload.ContentLength > 0)
-            //{
-            //    //get filename
-            //    var fileName = System.IO.Path.GetFileName(fileUpload.FileName);
-            //    //get path
-            //    var path = Path.Combine(Server.MapPath("~/Images/Image_Books/"), fileName);
+            if (fileUpload != null && fileUpload.ContentLength > 0)
+            {
+                //get filename
+                var fileName = System.IO.Path.GetFileName(fileUpload.FileName);
+                //get path
+                var path = Path.Combine(Server.MapPath("~/Areas/img/"), fileName);
 
-            //    //ktra image exist
-            //    if (System.IO.File.Exists(path))
-            //    {
-            //        ViewBag.mesage = "Ảnh này đã tồn tại!";
-            //    }
-            //    else
-            //    {
-            //        fileUpload.SaveAs(path);
-            //        //lưu file name vào DB ảnh bìa
-            //        item.HinhAnh = fileName;
-            //    }
-            //}
+                //ktra image exist
+                if (System.IO.File.Exists(path))
+                {
+                    ViewBag.mesage = "Ảnh này đã tồn tại!";
+                }
+                else
+                {
+                    fileUpload.SaveAs(path);
+                    //lưu file name vào DB ảnh bìa
+                    item.HinhAnh = fileName;
+                }
+            }
 
             _context.SanPhams.Add(item);
             _context.SaveChanges();// save to DB
@@ -206,12 +205,12 @@ namespace QLAdmin.Areas.Admin.Controllers
                 // Get filename
                 var fileName = System.IO.Path.GetFileName(fileUpload.FileName);
                 // Get path
-                var path = Path.Combine(Server.MapPath("~/Images/Image_Books/"), fileName);
+                var path = Path.Combine(Server.MapPath("~/Areas/img/"), fileName);
 
                 // Check if image already exists
 
                 // Delete old image if it exists
-                var oldImagePath = Path.Combine(Server.MapPath("~/Images/Image_Books/"), item.HinhAnh);
+                var oldImagePath = Path.Combine(Server.MapPath("~/Areas/img/"), item.HinhAnh);
                 if (System.IO.File.Exists(oldImagePath))
                 {
                     System.IO.File.Delete(oldImagePath);
